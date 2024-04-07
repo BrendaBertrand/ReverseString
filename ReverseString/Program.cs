@@ -12,12 +12,19 @@ class Program
             inputString = Console.ReadLine();
         } while (inputString.Trim() == "");
 
-
         string reversedString = "";
-        for (int i = inputString.Length - 1; i >= 0; i--)
+        //Reverse Loop
+        // for (int i = inputString.Length - 1; i >= 0; i--)
+        // {
+        //     reversedString += inputString[i];
+        // }
+
+        //Forward loop
+        for (int i = 0; i < inputString.Length; i++)
         {
-            reversedString += inputString[i];
+            reversedString = inputString[i] + reversedString;
         }
+
 
         Console.WriteLine($"The reversed string is : {reversedString}");
 
